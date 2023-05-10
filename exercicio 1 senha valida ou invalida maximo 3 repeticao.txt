@@ -1,0 +1,43 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+	
+		int senha;
+		int i = 1;
+		
+		
+		
+		System.out.printf("Digite a senha:  %n");
+		senha = sc.nextInt();
+	
+
+		while(senha != 2002) {
+			
+			System.out.println("senha incorreta");
+			System.out.println("Digite Novamente");
+			senha = sc.nextInt();
+			if(senha != 2002) {
+			i++;
+			}
+			if(i >= 3) {
+				System.out.println("3 tentativas realizadas");
+				System.out.println("sua conta foi bloqueada , procure o gerente da sua agencia");
+				break;
+			}
+			
+		}
+			if(senha == 2002) {
+				System.out.println("senha valida");
+			} else {
+			System.out.println("obrigado");
+			}
+		
+		sc.close();
+	}
+}
